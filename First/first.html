@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First</title>
+</head>
+<body>
+    <h1>This is First HTML using Js</h1>
+    <button type="button" onclick="document.getElementById('paragraph').innerHTML = Date()">Today</button>
+    <p id="paragraph"></p>
+    <button type="button" onclick="document.getElementById('text').innerHTML = 'test berhasil'">Test</button>
+    <p id="text"></p>
+
+    <input type="number" name="a"> +
+    <input type="number" name="b">
+    <button type="button" onclick="jumlah()">Hasil</button>
+
+    <p id="hasil">Hasil =</p>
+
+    <h2>Rumus Matematika</h2>
+
+    <input type="number" name="panjang"> 
+    <input type="number" name="lebar">
+    <input type="number" name="tinggi">
+    <button type="button" onclick="rumusBalok()">Hitung</button>
+
+    <p id="demo"></p>
+
+</body>
+
+
+
+<script>
+    function jumlah() {
+
+        var elm_hasil = document.getElementById('hasil');
+        var elm_a = document.getElementsByName('a');
+        var elm_b = document.getElementsByName('b');
+        
+        elm_hasil.innerHTML = 'Hasil :' + (parseInt(elm_a[0].value) + parseInt(elm_b[0].value));
+
+    }
+    // Perhitungan Volume
+    function rumusBalok(){
+        var demo = document.getElementById('demo');
+        var panjangBalok = document.getElementsByName('panjang');
+        var lebarBalok = document.getElementsByName('lebar');
+        var tinggiBalok = document.getElementsByName('tinggi');
+        var Volume =  parseInt(panjangBalok[0].value) * parseInt(lebarBalok[0].value) * parseInt(tinggiBalok[0].value);
+
+        demo.innerHTML = 'Hasil =' + Volume;
+        
+
+    }
+</script>
+</html>
