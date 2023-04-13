@@ -21,12 +21,28 @@
 
     <h2>Rumus Matematika</h2>
 
+    <h3>Rumus Balok</h3>
+
     <input type="number" name="panjang"> 
     <input type="number" name="lebar">
     <input type="number" name="tinggi">
     <button type="button" onclick="rumusBalok()">Hitung</button>
 
     <p id="demo"></p>
+
+    <h3>Rumus Segitiga</h3>
+
+
+        <input type="text" id="alas" name="alas">
+       
+         <input type="text" id="tinggi" name="tinggi">
+        
+        <input type="text"  id="luas" name="luas" disabled="true" size="5">
+        <input type="button" value="hitung" onClick="hitungluas()">
+ 
+  
+
+
 
 </body>
 
@@ -51,8 +67,14 @@
         var Volume =  parseInt(panjangBalok[0].value) * parseInt(lebarBalok[0].value) * parseInt(tinggiBalok[0].value);
 
         demo.innerHTML = 'Hasil =' + Volume;
-        
-
     }
+
+    // Perhitungan Segitiga
+    function hitungluas(){
+     alas=document.getElementById("alas").value;
+     tinggi=document.getElementById("tinggi").value;
+     luas=(alas*tinggi)*0.5;
+     document.getElementById("luas").value=luas;
+     }
 </script>
 </html>
